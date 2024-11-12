@@ -1,0 +1,786 @@
+@font-face {
+    font-family: 'fonts';
+    src: url('fonts/mi-tipografia/LEO\ Hates\ School\ MC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'fonts2';
+    src: url('fonts/tiposec/MoreSugar-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'fonts3';
+    src: url('fonts/tiposec/MoreSugar-Thin.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+  body {
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/papaynacho.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*opacidad*/
+    opacity: 0.5; /* Aquí aplicas la opacidad */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+  }
+  
+ 
+/*body {
+    height: 100%; 
+    margin: 0;
+    text-align: center;
+    background-image: url(img/papaynacho.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+ 
+  
+  /*heeader and menu hamburguesa*/
+ /*header{
+    background-image: url(img/fliahead.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #FFBA00;
+    font-family: 'fonts';
+ }*/
+ header {
+  position: relative; /* Necesario para posicionar el pseudo-elemento ::before */
+  background-color: rgba(0, 0, 0, 0); /* Fondo transparente para no cubrir la imagen */
+  background-image: url('img/laflia1.png'); /* Imagen de fondo */
+  background-size: 500px 380px; /* Ajustamos el tamaño de la imagen  */
+  background-position: center ; /* Centra la imagen */
+  background-position-y: bottom;
+  background-attachment: fixed; /* Fija la imagen cuando se hace scroll */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh; /* Altura completa del viewport */
+  color: #FFBA00; /* Color de los textos */
+  font-family: 'fonts';
+}
+
+header::before {
+  content: ''; /* Crea el pseudo-elemento */
+  position: absolute; /* Lo posicionamos absolutamente */
+  top: 0; left: 0; right: 0; bottom: 0; /* Lo estiramos para cubrir todo el header */
+  background-color: black; /* El fondo negro que aparecerá detrás de la imagen */
+  z-index: -1; /* Lo coloca detrás del contenido del header */
+}
+
+.titulo, .menu {
+  position: relative; /* Asegura que el contenido (texto) se coloque encima del pseudo-elemento */
+  z-index: 1; /* Mantiene el contenido por encima de la imagen y fondo negro */
+}
+  li{
+    list-style: none;
+    margin-right: 25px;
+  }
+  header li {
+    font-family: 'fonts3';
+  }
+  #listass{
+    color: #FFBA00;
+    background: none;
+    border:0;
+    cursor: pointer;
+    text-decoration:none;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .lista{
+    display: flex;
+    align-items: flex-start;
+    font-size: 25px;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    width: 90%;
+    margin: auto;
+  }
+  .menu p{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .menu-icon{
+    display: none;
+  }
+  .menu-icon{
+    display: none;
+  }
+  .titulo h1{
+    font-family: 'fonts';
+    font-weight: normal;
+    font-size: 80px;
+    margin: 0px;
+    position: relative;
+    transition-property: font-size;
+    transition-duration: 3s;
+    font-size: 100px;
+    text-shadow: 2px 2px 4px #FFFF;
+    margin-top: -100px;
+    font-weight: 599;
+  }
+  .titulo h1:hover {
+    transition-property: font-size;
+    transition-duration: 3s;
+    font-size: 150px;
+  }
+  .up a{
+    text-decoration:none;
+    color: black;
+    font-size: 16px;
+    background-image: url(img/pelota.png);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    color: #FF0000;
+    font-family: 'fonts2';
+  }
+
+.titulo{
+  text-align: center;
+  margin-top: 150px;
+}
+.titulo a{
+  text-decoration-line: none;
+}
+.titulo h2{
+  color: #FFBA00;
+}
+ 
+/*contenedor general*/
+.general{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+width: 100%;
+
+}
+.general section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .general section img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+ }
+.general h1{
+  font-family: 'fonts';
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.general h2{
+  font-family: 'fonts2';
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.general h4{
+  font-family: 'fonts2';
+  text-align: center;
+}
+
+.general p{
+  font-family: 'fonts3';
+}
+.section1 {
+  transition-duration: 2s;
+}
+.section1:hover {
+  /*border: solid 3px #FFBA00;*/
+    transition-duration: 1s;
+    box-shadow: 0 0 20px #FFBA00;
+}
+
+/*dirección*/
+.contenedorcaro{
+    justify-content: space-around;
+    width: 170vh;
+    height: 150vh;
+    background-image: url(img/fondohoja.jpg); 
+    column-count: 2; /* Divide el contenido en dos columnas */
+    column-gap: 10px; /* Espacio entre las columnas */
+    box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+    border-radius: 5%;
+    }
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*height: 100vh; /* O puedes usar un valor específico como 500px */
+    }
+/*.col img {
+    margin-bottom: 20px; /* Espacio entre la imagen y los demás elementos */
+    
+#img1 {
+  height: auto;
+  width: auto;
+}
+
+#img2 {
+  height: auto;
+  width: auto;
+  /*padding-top: -10px;*/
+}
+
+#img3 {
+  padding-top: 0%;
+}
+
+.contenedorcaro p {
+  text-align: center;
+  margin: 5%;
+  font-size: 20px;
+}
+.contenedorcaro h1{
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.contenedorcaro h4{
+  margin-top: 0%;
+}
+
+#Direccion img{
+ margin-top: 20px;
+}
+.prota{
+  text-align: left;
+}
+.prota p{
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.prota h2{
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+ 
+/*asistente de dirección*/
+.contenedorayi{
+    
+  justify-content: space-around;
+  width: 170vh;
+  height: 150vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+}
+
+.contenedorayi p {
+text-align: center;
+margin: 10%;
+font-size: 20px;
+}
+.contenedorayi h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedorayi h4{
+  margin-top: -30%;
+}
+#asisdire img{
+margin-top: 20px;
+}
+#ayiimg3 {
+  width: 500px;
+}
+
+
+/*produccion*/
+.contenedorkiara {
+  justify-content: space-around;
+  width: 170vh;
+  height: 135vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+  }
+
+.contenedorkiara p {
+text-align: center;
+margin: 5%;
+font-size: 20px;
+}
+.contenedorkiara h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedorkiara h4{
+  margin-top: 0%;
+}
+
+#kiariimg3 {
+  width: 180px;
+  height: 150px;
+}
+
+#Produccion img{
+ margin-top: 20px;
+}
+
+/*guión*/
+.contenedoreli { 
+  justify-content: space-around;
+  width: 170vh;
+  height: 150vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+  }
+
+.contenedoreli p {
+text-align: center;
+margin: 10%;
+font-size: 20px;
+}
+.contenedoreli h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedoreli h4{
+  margin-top: -20%;
+}
+
+#guion img{
+margin-top: 20px;
+}
+
+/*DirArte*/
+.contenedorlenna { 
+  justify-content: space-around;
+  width: 170vh;
+  height: 150vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+  }
+
+.contenedorlenna p {
+text-align: center;
+margin: 10%;
+font-size: 20px;
+}
+.contenedorlenna h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedorlenna h4{
+  margin-top: 5%;
+}
+#lennaimg3{
+  width: 300px;
+  height: 180px;
+}
+#DirArte img{
+margin-top: 20px;
+}
+
+/*Dirección de Fotografía*/
+.contenedoragus { 
+  justify-content: space-around;
+  width: 170vh;
+  height: 150vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+  }
+
+.contenedoragus p {
+text-align: center;
+margin: 5%;
+font-size: 20px;
+}
+.contenedoragus h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedoragus h4{
+  margin-top: 0%;
+}
+
+#DirFoto img{
+margin-top: 20px;
+}
+
+/*Cámara*/
+.contenedorjuani { 
+  justify-content: space-around;
+  width: 170vh;
+  height: 150vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+  }
+
+.contenedorjuani p {
+text-align: center;
+margin: 13%;
+font-size: 20px;
+}
+.contenedorjuani h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedorjuani h4{
+  margin-top: -20%;
+}
+#juaniimg3 {
+  width: 180px;
+  height: 150px;
+}
+#camara img{
+margin-top: 20px;
+}
+
+/*Dirección de Sonido*/
+.contenedoredi { 
+  justify-content: space-around;
+  width: 170vh;
+  height: 150vh;
+  background-image: url(img/fondohoja.jpg); 
+  column-count: 2; /* Divide el contenido en dos columnas */
+  column-gap: 10px; /* Espacio entre las columnas */
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+  }
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* O puedes usar un valor específico como 500px */
+  }
+
+.contenedoredi p {
+text-align: center;
+margin: 6%;
+font-size: 20px;
+}
+.contenedoredi h1{
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.contenedoredi h4{
+  margin-top: -10%;
+}
+#DirSonido img{
+margin-top: 20px;
+}
+
+/*equipo*/
+.equipo1 {
+  text-align: center;
+  font-family: 'fonts'; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.equipo1 h1{
+  font-family: 'fonts';
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.equipo1 img {
+  margin-top: 5%;
+}
+.equimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(img/fondohoja3.jpg);
+  width: 150vh;
+  height: 100vh;
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+}
+.equimg img{
+  width: 90%;
+  height: 90%;
+  border-radius: 5%;
+}
+
+/*reflexiones*/
+.refle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.refle img{
+  width: 130px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+}
+.refle h1{
+  font-family: 'fonts';
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.retex p {
+  font-family: 'fonts2';
+  text-align: center;
+  font-size: 30px;
+  width: 100vh;
+  margin: auto;
+}
+.retex {
+  background-image: url(img/fondohoja3.jpg);
+  width: 135vh;
+  height: 130vh;
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+}
+
+ .retex section img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+ }
+ 
+
+/*cortometraje*/
+.video{
+  text-align: center;
+}
+.video h1 {
+  font-family: 'fonts';
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+iframe {
+  border-radius: 3%;
+}
+
+
+
+
+
+
+/*botones*/
+#up{
+  position: fixed;
+  top: 20%;
+  left: 1%;
+}
+footer {
+  text-align: center;
+}
+footer p {
+  font-family: 'fonts3';
+}
+
+
+
+@media  (max-width: 800px){
+    nav{
+      position: absolute;
+      top: 70px;
+      left: 0px;
+      background-image: url(img/fondohoja2.jpg);
+      width: 100%;
+      display: none;
+    }
+  .lista{
+      flex-direction: column;
+      display: flex;
+    }
+  .menu-icon{
+    display: block;
+    width: 25px;
+  }
+  body {
+    max-width: 100vh;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .titulo {
+    text-align: center;
+    margin-top: 300px;  /* Ajusta el margen superior para darle espacio al menú hamburguesa */
+    z-index: 1;
+  }
+  
+  .titulo h1 {
+    font-size: 50px;
+    margin: 0px;
+    position: relative;
+    transition-property: font-size;
+    transition-duration: 3s;
+    font-size: 70px;
+    text-shadow: 2px 2px 4px #FFFF;
+    margin-top: -100px;
+    font-weight: 599;
+  }
+  .titulo h1:hover {
+    transition-property: font-size;
+    transition-duration: 3s;
+    font-size: 90px;
+  }
+
+
+  .contenedorcaro , .contenedorayi, .contenedorkiara , 
+  .contenedoreli , .contenedorlenna ,.contenedoragus ,
+   .contenedorjuani, .contenedoredi {
+    width: 90vh;
+    height: 280vh;
+    box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+    overflow: hidden;
+    padding-top: 80px;
+    margin-top: 0px;
+  }
+
+  .contenedorayi h4, .contenedoreli h4 {
+    margin-top: -15px;
+  }
+
+  /*equipo*/
+  .equipo1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .equimg {
+    background-image: url(img/fondohoja3.jpg);
+    width: 90%;
+    height: auto;
+    box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+    border-radius: 5%;
+  }
+
+ /*reflexiones*/
+.refle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.refle h1{
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.retex p {
+  width: 85%;
+  margin: auto;
+}
+.retex {
+  background-image: url(img/fondohoja3.jpg);
+  width: 90%;
+  height: auto;
+  box-shadow: 16px 13px 42px 12px rgba(0,0,0,0.69);
+  border-radius: 5%;
+}
+
+
+}
+
+
