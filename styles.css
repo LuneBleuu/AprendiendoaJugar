@@ -694,14 +694,14 @@ footer p {
     width: 25px;
   }
   body {
-    max-width: 100vh;
+    width: 100vh;
     text-align: center;
     justify-content: center;
   }
 
   .titulo {
     text-align: center;
-    margin-top: 300px;  /* Ajusta el margen superior para darle espacio al menú hamburguesa */
+    margin-top: 300px; 
     z-index: 1;
   }
   
